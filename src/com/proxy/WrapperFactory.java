@@ -1,4 +1,9 @@
-package iitc.reflect;
+package com.proxy;
+
+import com.proxy.reflect.ConfiguredFactory;
+import com.proxy.reflect.MappedClass;
+import com.proxy.reflect.MappingInvocationHandler;
+import com.proxy.reflect.Wrapper;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
@@ -76,7 +81,7 @@ public class WrapperFactory {
      * @param handler      handler for all abstract methods
      * @return proxy class of the model class with all GlobalMappedMember methods mapped accordingly
      */
-    static <W> W newInstance(Class<W> wrapperClass, InvocationHandler handler) {
+    public static <W> W newInstance(Class<W> wrapperClass, InvocationHandler handler) {
         if (handler == null)
             throw new IllegalArgumentException();
         return (W) Proxy.newProxyInstance(wrapperClass.getClassLoader(), new Class[]{wrapperClass}, handler);

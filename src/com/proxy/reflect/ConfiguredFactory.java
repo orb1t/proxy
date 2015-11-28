@@ -1,6 +1,7 @@
-package iitc.reflect;
+package com.proxy.reflect;
 
-import iitc.util.Equality;
+import com.proxy.WrapperFactory;
+import com.proxy.util.Equality;
 
 import java.util.ArrayList;
 import java.util.Collections;

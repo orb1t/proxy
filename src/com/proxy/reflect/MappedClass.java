@@ -1,4 +1,4 @@
-package iitc.reflect;
+package com.proxy.reflect;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

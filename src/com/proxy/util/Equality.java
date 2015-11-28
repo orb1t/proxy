@@ -1,4 +1,4 @@
-package iitc.util;
+package com.proxy.util;
 
 /**
  * Equality

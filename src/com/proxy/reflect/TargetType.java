@@ -1,4 +1,4 @@
-package iitc.reflect;
+package com.proxy.reflect;
 
 /**
  * TargetType

@@ -1,6 +1,6 @@
-package iitc.reflect;
+package com.proxy.reflect;
 
-import iitc.util.Equality;
+import com.proxy.util.Equality;
 import jdk.internal.org.objectweb.asm.Opcodes;
 
 import java.lang.reflect.Field;
