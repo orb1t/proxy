@@ -1,7 +1,5 @@
 package com.proxy.reflect;
 
-import jdk.internal.org.objectweb.asm.Opcodes;
-
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -22,7 +20,7 @@ public @interface MappedMember {
 
     public String name();
 
-    public int access() default Opcodes.GETFIELD;
+    public int access() default 180;
 
     public boolean declared() default false;
 }
