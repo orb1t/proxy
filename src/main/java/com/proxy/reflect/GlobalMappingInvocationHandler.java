@@ -1,7 +1,6 @@
 package com.proxy.reflect;
 
 import com.proxy.util.Equality;
-import jdk.internal.org.objectweb.asm.Opcodes;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
@@ -144,16 +143,16 @@ public class GlobalMappingInvocationHandler implements InvocationHandler {
                     Method m = mapping.declared() ? mapping.parent().getDeclaredMethod(mapping.name(), parameterTypes == null ? method.getParameterTypes() : parameterTypes) : mapping.parent().getMethod(mapping.name(), parameterTypes == null ? method.getParameterTypes() : parameterTypes);
                     m.setAccessible(true);
                     Object[] parameterValues = ((GlobalMappedMethod) mapping).parameterValues();
-                    return m.invoke((mapping.access() & Opcodes.ACC_STATIC) != 0 ? null : mapping.model(), parameterValues == null ? args : parameterValues);
+                    return m.invoke((mapping.access() & 0x8) != 0 ? null : mapping.model(), parameterValues == null ? args : parameterValues);
                 } else {
                     Method m = mapping.declared() ? mapping.parent().getDeclaredMethod(mapping.name()) : mapping.parent().getMethod(mapping.name());
                     m.setAccessible(true);
-                    return m.invoke((mapping.access() & Opcodes.ACC_STATIC) != 0 ? null : mapping.model());
+                    return m.invoke((mapping.access() & 0x8) != 0 ? null : mapping.model());
                 }
             case FIELD:
                 Field f = mapping.declared() ? mapping.parent().getDeclaredField(mapping.name()) : mapping.parent().getField(mapping.name());
                 f.setAccessible(true);
-                return f.get((mapping.access() & Opcodes.ACC_STATIC) != 0 ? null : mapping.model());
+                return f.get((mapping.access() & 0x8) != 0 ? null : mapping.model());
             default:
                 throw new IllegalStateException("Invalid type for ValueRetriever, " + mapping.type());
         }
