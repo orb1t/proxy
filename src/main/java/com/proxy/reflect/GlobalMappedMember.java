@@ -1,7 +1,5 @@
 package com.proxy.reflect;
 
-import jdk.internal.org.objectweb.asm.Opcodes;
-
 /**
  * GlobalMappedMember
  * <p>
@@ -100,7 +98,7 @@ public class GlobalMappedMember {
      * @throws IllegalArgumentException if access ==-1, name == null, type == null, modelClass == null, or the access is non-static and the model is null
      */
     public GlobalMappedMember(int access, String wrapperName, String name, TargetType type, boolean declared, Class<?> modelClass, Object model) {
-        if (access == -1 || name == null || type == null || modelClass == null || (access & Opcodes.ACC_STATIC) == 0 && model == null)
+        if (access == -1 || name == null || type == null || modelClass == null || (access & 0x8) == 0 && model == null)
             throw new IllegalArgumentException();
         this.access = access;
         this.wrapperName = wrapperName;
