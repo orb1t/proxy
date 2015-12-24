@@ -1,7 +1,6 @@
 package com.proxy.reflect;
 
 import com.proxy.util.Equality;
-import jdk.internal.org.objectweb.asm.Opcodes;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
@@ -110,11 +109,11 @@ public class MappingInvocationHandler<E> implements InvocationHandler {
             case METHOD:
                 Method m = retriever.declared() ? source.getClass().getDeclaredMethod(retriever.name()) : source.getClass().getMethod(retriever.name());
                 m.setAccessible(true);
-                return m.invoke((retriever.access() & Opcodes.ACC_STATIC) != 0 ? null : source);
+                return m.invoke((retriever.access() & 0x8) != 0 ? null : source);
             case FIELD:
                 Field f = retriever.declared() ? source.getClass().getDeclaredField(retriever.name()) : source.getClass().getField(retriever.name());
                 f.setAccessible(true);
-                return f.get((retriever.access() & Opcodes.ACC_STATIC) != 0 ? null : source);
+                return f.get((retriever.access() & 0x8) != 0 ? null : source);
             default:
                 throw new IllegalStateException("Invalid type for ValueRetriever, " + retriever.type());
         }
