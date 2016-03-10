@@ -13,8 +13,8 @@ import java.util.Map;
  * <p>
  * An InvocationHandler which maps all abstract methods, using GlobalMappedMember objects, to their appropriate designated target entity.
  *
- * @author Ian
- * @version 1.0
+ * @author Ian Caffey
+ * @since 1.0
  */
 public class GlobalMappingInvocationHandler implements InvocationHandler {
     private final Map<String, GlobalMappedMember> mapping;

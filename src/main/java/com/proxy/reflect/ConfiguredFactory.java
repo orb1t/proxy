@@ -14,8 +14,8 @@ import java.util.List;
  * The target object does not have to be set before calling #newInstance as there are model classes for each GlobalMappedMember to pull data from for the
  * InvocationHandler to properly handle the undefined methods.
  *
- * @author Ian
- * @version 1.0
+ * @author Ian Caffey
+ * @since 1.0
  */
 public class ConfiguredFactory<W, E> {
     private final List<GlobalMappedMember> mappings = new ArrayList<>();

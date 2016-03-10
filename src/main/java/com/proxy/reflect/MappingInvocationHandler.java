@@ -11,8 +11,8 @@ import java.lang.reflect.Method;
  * <p>
  * An InvocationHandler which maps all abstract methods with the annotation MappedMember to their appropriate designated target entity.
  *
- * @author Ian
- * @version 1.0
+ * @author Ian Caffey
+ * @since 1.0
  * @see MappedMember
  */
 public class MappingInvocationHandler<E> implements InvocationHandler {

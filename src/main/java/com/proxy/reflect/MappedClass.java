@@ -10,8 +10,8 @@ import java.lang.annotation.Target;
  * <p>
  * An annotation that provides the target data needed to properly map the host class.
  *
- * @author Ian
- * @version 1.0
+ * @author Ian Caffey
+ * @since 1.0
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(value = ElementType.TYPE)

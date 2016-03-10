@@ -8,8 +8,8 @@ import java.lang.reflect.Method;
  * An exception thrown when an abstract method of a Wrapper class does not have a MappedMember annotation present,
  * leaving the MappingInvocationHandler unable to return a valid value.
  *
- * @author Ian
- * @version 1.0
+ * @author Ian Caffey
+ * @since 1.0
  */
 public class MappingException extends Exception {
     /**

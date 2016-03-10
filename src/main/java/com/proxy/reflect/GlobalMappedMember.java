@@ -5,8 +5,8 @@ package com.proxy.reflect;
  * <p>
  * An object similar to MappedMember in which all data for mapping purposes are stored
  *
- * @author Ian
- * @version 1.0
+ * @author Ian Caffey
+ * @since 1.0
  */
 public class GlobalMappedMember {
     private final Object model;

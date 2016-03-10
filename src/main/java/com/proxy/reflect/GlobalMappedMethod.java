@@ -5,8 +5,8 @@ import java.util.Arrays;
 /**
  * GlobalMappedMethod
  *
- * @author Ian
- * @version 1.0
+ * @author Ian Caffey
+ * @since 1.0
  */
 public class GlobalMappedMethod extends GlobalMappedMember {
     private final Class<?>[] wrapperParameterTypes;
