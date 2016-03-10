@@ -1,7 +1,7 @@
-package com.proxy.reflect;
+package com.iancaffey.proxy.reflect;
 
-import com.proxy.WrapperFactory;
-import com.proxy.util.Equality;
+import com.iancaffey.proxy.WrapperFactory;
+import com.iancaffey.proxy.util.Equality;
 
 import java.util.ArrayList;
 import java.util.Collections;

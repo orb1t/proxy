@@ -1,4 +1,4 @@
-package com.proxy.util;
+package com.iancaffey.proxy.util;
 
 /**
  * Equality

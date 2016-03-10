@@ -1,6 +1,6 @@
-package com.proxy.reflect;
+package com.iancaffey.proxy.reflect;
 
-import com.proxy.util.Equality;
+import com.iancaffey.proxy.util.Equality;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
@@ -12,8 +12,8 @@ import java.lang.reflect.Method;
  * An InvocationHandler which maps all abstract methods with the annotation MappedMember to their appropriate designated target entity.
  *
  * @author Ian Caffey
- * @since 1.0
  * @see MappedMember
+ * @since 1.0
  */
 public class MappingInvocationHandler<E> implements InvocationHandler {
     private final E source;

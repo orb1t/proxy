@@ -1,9 +1,9 @@
-package com.proxy;
+package com.iancaffey.proxy;
 
-import com.proxy.reflect.ConfiguredFactory;
-import com.proxy.reflect.MappedClass;
-import com.proxy.reflect.MappingInvocationHandler;
-import com.proxy.reflect.Wrapper;
+import com.iancaffey.proxy.reflect.ConfiguredFactory;
+import com.iancaffey.proxy.reflect.MappedClass;
+import com.iancaffey.proxy.reflect.MappingInvocationHandler;
+import com.iancaffey.proxy.reflect.Wrapper;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;

@@ -1,6 +1,6 @@
-package com.proxy.reflect;
+package com.iancaffey.proxy.reflect;
 
-import com.proxy.util.Equality;
+import com.iancaffey.proxy.util.Equality;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;

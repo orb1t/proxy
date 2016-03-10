@@ -1,4 +1,4 @@
-package com.proxy.reflect;
+package com.iancaffey.proxy.reflect;
 
 import java.lang.reflect.Method;
 
